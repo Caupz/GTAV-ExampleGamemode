@@ -10,16 +10,19 @@ namespace CopsAndRobbers
 {
     public class Main : BaseScript
     {
-        MPEventFramework.Main Events = new MPEventFramework.Main();
-
+        Base core = new Base();
         public Main()
         {
-            Events.OnTryingToEnterVehicle += OnTryingToEnterVehicle;
-            Events.OnPlayerEnteredVehicle += OnPlayerEnteredVehicle;
-            Events.OnPlayerLeaveVehicle += OnPlayerLeaveVehicle;
+            Debug.WriteLine("MAIN SUBSCRIBING TO EVENTS");
+            core.OnPlayerTryingToEnterVehicle += OnPlayerTryingToEnterVehicle;
+            core.OnPlayerEnteredVehicle += OnPlayerEnteredVehicle;
+            core.OnPlayerLeaveVehicle += OnPlayerLeaveVehicle;
+            core.OnPlayerSeatChange += OnPlayerSeatChange;
+            core.OnPlayerSpawnIntoVehicle += OnPlayerSpawnIntoVehicle;
+            Debug.WriteLine("MAIN SUBSCRIBED TO EVENTS");
         }
 
-        public void OnTryingToEnterVehicle(int vehicleHandle)
+        public void OnPlayerTryingToEnterVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnTryingToEnterVehicle");
         }
@@ -28,10 +31,26 @@ namespace CopsAndRobbers
         {
             Debug.WriteLine("CNR: OnPlayerEnteredVehicle");
         }
-
+        
         public void OnPlayerLeaveVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeaveVehicle");
+        }
+
+        public void OnPlayerSeatChange(int vehicleHandle, int newVehicleSeat)
+        {
+            Debug.WriteLine("CNR: OnPlayerSeatChange");
+        }
+
+        public void OnPlayerSpawnIntoVehicle(int vehicleHandle)
+        {
+            Debug.WriteLine("CNR: OnPlayerSpawnIntoVehicle");
+        }
+
+        [Tick]
+        async Task OnTickMain()
+        {
+            core.Process();
         }
     }
 }
