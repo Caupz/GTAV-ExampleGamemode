@@ -20,6 +20,9 @@ namespace CopsAndRobbers
             core.OnPlayerSeatChange += OnPlayerSeatChange;
             core.OnPlayerSpawnIntoVehicle += OnPlayerSpawnIntoVehicle;
             Debug.WriteLine("MAIN SUBSCRIBED TO EVENTS");
+            core.enableRealtimeGametime = true;
+            // TODO eventid teha ja listenida.
+            // TODO testida nii palju evente kui saab.
         }
 
         public void OnPlayerTryingToEnterVehicle(int vehicleHandle, int vehicleSeat)
