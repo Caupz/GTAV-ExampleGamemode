@@ -15,6 +15,7 @@ namespace CopsAndRobbers
 
         public Main()
         {
+            EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
             Debug.WriteLine("MAIN SUBSCRIBING TO EVENTS");
             core.OnPlayerTryingToEnterVehicle += OnPlayerTryingToEnterVehicle;
             core.OnPlayerEnteredVehicle += OnPlayerEnteredVehicle;
@@ -64,12 +65,15 @@ namespace CopsAndRobbers
         {
             RegisterCommand("cuffs", new Action<int, List<object>, string>(async (source, args, raw) =>
             {
-                if(IsPedCuffed(core.pedHandle))
+                Debug.WriteLine("cuffs1");
+                if (IsPedCuffed(core.pedHandle))
                 {
+                    Debug.WriteLine("cuffs2");
                     SetEnableHandcuffs(core.pedHandle, false);
                 }
                 else
                 {
+                    Debug.WriteLine("cuffs3");
                     SetEnableHandcuffs(core.pedHandle, true);
                 }
             }), false);
@@ -80,12 +84,13 @@ namespace CopsAndRobbers
 
                 if (Int32.TryParse(args[0].ToString(), out weapon))
                 {
-                    SetEntityHealth(core.pedHandle, weapon);
-                }
+                    Debug.WriteLine("weapon " + weapon + " MPEventFramework.Weapon.weaponNames.Count:" + MPEventFramework.Weapon.weaponNames.Count);
 
-                if(weapon < MPEventFramework.Weapon.weaponNames.Count)
-                {
-                    GiveWeaponToPed(core.pedHandle, (uint)GetHashKey(MPEventFramework.Weapon.weaponNames[weapon]), 1000, false, true);
+                    if (weapon < MPEventFramework.Weapon.weaponNames.Count)
+                    {
+                        Debug.WriteLine("giving");
+                        GiveWeaponToPed(core.pedHandle, (uint)GetHashKey(MPEventFramework.Weapon.weaponNames[weapon]), 1000, false, true);
+                    }
                 }
             }), false);
 
@@ -93,8 +98,10 @@ namespace CopsAndRobbers
             {
                 int hp = 0;
 
-                if(Int32.TryParse(args[0].ToString(), out hp))
+                Debug.WriteLine("hp");
+                if (Int32.TryParse(args[0].ToString(), out hp))
                 {
+                    Debug.WriteLine("hp:"+hp);
                     SetEntityHealth(core.pedHandle, hp);
                 }
             }), false);
@@ -103,8 +110,10 @@ namespace CopsAndRobbers
             {
                 int arm = 0;
 
+                Debug.WriteLine("arm");
                 if (Int32.TryParse(args[0].ToString(), out arm))
                 {
+                    Debug.WriteLine("arm:" + arm);
                     SetPedArmour(core.pedHandle, arm);
                 }
             }), false);
@@ -112,6 +121,7 @@ namespace CopsAndRobbers
             RegisterCommand("helm", new Action<int, List<object>, string>(async (source, args, raw) =>
             {
                 helmState = !helmState;
+                Debug.WriteLine("helmState:" + helmState);
                 SetPedConfigFlag(core.pedHandle, 35, helmState);
             }), false);
         }
