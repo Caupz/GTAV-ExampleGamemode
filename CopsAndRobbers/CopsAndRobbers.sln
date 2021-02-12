@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1300
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopsAndRobbers", "CopsAndRobbers.csproj", "{2BDC8048-2D21-4018-903A-12658B00E9F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopsAndRobbersServer", "..\CopsAndRobbersServer\CopsAndRobbersServer.csproj", "{F5539A4C-A704-4A26-A7AA-B39DBCD9C184}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2BDC8048-2D21-4018-903A-12658B00E9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BDC8048-2D21-4018-903A-12658B00E9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BDC8048-2D21-4018-903A-12658B00E9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5539A4C-A704-4A26-A7AA-B39DBCD9C184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5539A4C-A704-4A26-A7AA-B39DBCD9C184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5539A4C-A704-4A26-A7AA-B39DBCD9C184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5539A4C-A704-4A26-A7AA-B39DBCD9C184}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
