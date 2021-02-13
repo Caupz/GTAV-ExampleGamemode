@@ -34,9 +34,9 @@
     <Reference Include="CitizenFX.Core">
       <HintPath>E:\RAGEMP\server-files\bridge\resources\gtav.ee-rp\GTAVeeRPFiveMClient\GTAVeeRPFiveMClient\CitizenFX.Core.dll</HintPath>
     </Reference>
-    <Reference Include="MPEventFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MPFrameworkClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\FXServer\server-data\resources\cnr\server\MPEventFramework.dll</HintPath>
+      <HintPath>E:\FXServer\server-data\resources\cnr\server\MPFrameworkClient.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

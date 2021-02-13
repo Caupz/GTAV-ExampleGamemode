@@ -179,12 +179,12 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerStoppedToGetUp");
         }
 
-        public void OnPlayerStartedToAimFromCover(Player client)
+        public void OnPlayerStartedToAimFromCover(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStartedToAimFromCover");
         }
 
-        public void OnPlayerStoppedToAimFromCover(Player client)
+        public void OnPlayerStoppedToAimFromCover(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStoppedToAimFromCover");
         }
@@ -229,12 +229,12 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerStoppedClimbing");
         }
 
-        public void OnPlayerDied(Player client)
+        public void OnPlayerDied(Player client, float x, float y, float z)
         {
             Debug.WriteLine("OnPlayerDied");
         }
 
-        public void OnPlayerRevived(Player client)
+        public void OnPlayerRevived(Player client, float x, float y, float z)
         {
             Debug.WriteLine("OnPlayerRevived");
         }
@@ -249,12 +249,12 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerStoppedDiving");
         }
 
-        public void OnPlayerStartedDriveBy(Player client)
+        public void OnPlayerStartedDriveBy(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStartedDriveBy");
         }
 
-        public void OnPlayerStoppedDriveBy(Player client)
+        public void OnPlayerStoppedDriveBy(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStoppedDriveBy");
         }
@@ -279,12 +279,12 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerStoppedOnFoot");
         }
 
-        public void OnPlayerEnteredMeleeCombat(Player client)
+        public void OnPlayerEnteredMeleeCombat(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerEnteredMeleeCombat");
         }
 
-        public void OnPlayerLeftMeleeCombat(Player client)
+        public void OnPlayerLeftMeleeCombat(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerLeftMeleeCombat");
         }
@@ -309,22 +309,22 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerLeftParachuteFreefall");
         }
 
-        public void OnPlayerStartedReloading(Player client)
+        public void OnPlayerStartedReloading(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStartedReloading");
         }
 
-        public void OnPlayerStoppedReloading(Player client)
+        public void OnPlayerStoppedReloading(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStoppedReloading");
         }
 
-        public void OnPlayerStartedShooting(Player client)
+        public void OnPlayerStartedShooting(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStartedShooting");
         }
 
-        public void OnPlayerStoppedShooting(Player client)
+        public void OnPlayerStoppedShooting(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStoppedShooting");
         }
@@ -349,12 +349,12 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerStoppedSwimmingUnderwater");
         }
 
-        public void OnPlayerStartedStealthKill(Player client)
+        public void OnPlayerStartedStealthKill(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStartedStealthKill");
         }
 
-        public void OnPlayerStoppedStealthKill(Player client)
+        public void OnPlayerStoppedStealthKill(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStoppedStealthKill");
         }
@@ -389,7 +389,7 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerLeftMainMenu");
         }
 
-        public void OnPlayerReadyToShoot(Player client)
+        public void OnPlayerReadyToShoot(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerReadyToShoot");
         }
@@ -399,32 +399,32 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerNotReadyToShoot");
         }
 
-        public void OnPlayerStartedAiming(Player client)
+        public void OnPlayerStartedAiming(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStartedAiming");
         }
 
-        public void OnPlayerStoppedAiming(Player client)
+        public void OnPlayerStoppedAiming(Player client, uint weapon)
         {
             Debug.WriteLine("OnPlayerStoppedAiming");
         }
 
-        public void OnPlayerHealthGain(Player client)
+        public void OnPlayerHealthGain(Player client, int oldHealth, int newHealth)
         {
             Debug.WriteLine("OnPlayerHealthGain");
         }
 
-        public void OnPlayerHealthLoss(Player client)
+        public void OnPlayerHealthLoss(Player client, int oldHealth, int newHealth)
         {
             Debug.WriteLine("OnPlayerHealthLoss");
         }
 
-        public void OnPlayerArmourGain(Player client)
+        public void OnPlayerArmourGain(Player client, int oldArmour, int newArmour)
         {
             Debug.WriteLine("OnPlayerArmourGain");
         }
 
-        public void OnPlayerArmourLoss(Player client)
+        public void OnPlayerArmourLoss(Player client, int oldArmour, int newArmour)
         {
             Debug.WriteLine("OnPlayerArmourLoss");
         }
@@ -449,97 +449,97 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerSeatChange");
         }
 
-        public void OnPlayerSpawnIntoVehicle(Player client, int vehicleNetworkId)
+        public void OnPlayerSpawnIntoVehicle(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerSpawnIntoVehicle");
         }
 
-        public void OnPlayerEnteredBoat(Player client)
+        public void OnPlayerEnteredBoat(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredBoat");
         }
 
-        public void OnPlayerLeftBoat(Player client)
+        public void OnPlayerLeftBoat(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftBoat");
         }
 
-        public void OnPlayerEnteredHeli(Player client)
+        public void OnPlayerEnteredHeli(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredHeli");
         }
 
-        public void OnPlayerLeftHeli(Player client)
+        public void OnPlayerLeftHeli(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftHeli");
         }
 
-        public void OnPlayerEnteredPlane(Player client)
+        public void OnPlayerEnteredPlane(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredPlane");
         }
 
-        public void OnPlayerLeftPlane(Player client)
+        public void OnPlayerLeftPlane(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftPlane");
         }
 
-        public void OnPlayerEnteredPoliceVehicle(Player client)
+        public void OnPlayerEnteredPoliceVehicle(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredPoliceVehicle");
         }
 
-        public void OnPlayerLeftPoliceVehicle(Player client)
+        public void OnPlayerLeftPoliceVehicle(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftPoliceVehicle");
         }
 
-        public void OnPlayerEnteredSub(Player client)
+        public void OnPlayerEnteredSub(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredSub");
         }
 
-        public void OnPlayerLeftSub(Player client)
+        public void OnPlayerLeftSub(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftSub");
         }
 
-        public void OnPlayerEnteredTaxi(Player client)
+        public void OnPlayerEnteredTaxi(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredTaxi");
         }
 
-        public void OnPlayerLeftTaxi(Player client)
+        public void OnPlayerLeftTaxi(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftTaxi");
         }
 
-        public void OnPlayerEnteredTrain(Player client)
+        public void OnPlayerEnteredTrain(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredTrain");
         }
 
-        public void OnPlayerLeftTrain(Player client)
+        public void OnPlayerLeftTrain(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftTrain");
         }
 
-        public void OnPlayerEnteredFlyingVehicle(Player client)
+        public void OnPlayerEnteredFlyingVehicle(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerEnteredFlyingVehicle");
         }
 
-        public void OnPlayerLeftFlyingVehicle(Player client)
+        public void OnPlayerLeftFlyingVehicle(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerLeftFlyingVehicle");
         }
 
-        public void OnPlayerStartedOnBike(Player client)
+        public void OnPlayerStartedOnBike(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerStartedOnBike");
         }
 
-        public void OnPlayerStoppedOnBike(Player client)
+        public void OnPlayerStoppedOnBike(Player client, int vehicleNetworkId, int seat)
         {
             Debug.WriteLine("OnPlayerStoppedOnBike");
         }
@@ -554,32 +554,32 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnPlayerStoppedOnVehicle");
         }
 
-        public void OnPlayerStartedJumpingOutOfVehicle(Player client)
+        public void OnPlayerStartedJumpingOutOfVehicle(Player client, int vehicleNetworkId, int vehicleSeat)
         {
             Debug.WriteLine("OnPlayerStartedJumpingOutOfVehicle");
         }
 
-        public void OnPlayerStoppedJumpingOutOfVehicle(Player client)
+        public void OnPlayerStoppedJumpingOutOfVehicle(Player client, int vehicleNetworkId, int vehicleSeat)
         {
             Debug.WriteLine("OnPlayerStoppedJumpingOutOfVehicle");
         }
 
-        public void OnPlayerStartedMovingVehicle(Player client)
+        public void OnPlayerStartedMovingVehicle(Player client, int vehicleNetworkId)
         {
             Debug.WriteLine("OnPlayerStartedMovingVehicle");
         }
 
-        public void OnPlayerStoppedVehicle(Player client)
+        public void OnPlayerStoppedVehicle(Player client, int vehicleNetworkId)
         {
             Debug.WriteLine("OnPlayerStoppedVehicle");
         }
 
-        public void OnPlayerStartedBurnouting(Player client)
+        public void OnPlayerStartedBurnouting(Player client, int vehicleNetworkId)
         {
             Debug.WriteLine("OnPlayerStartedBurnouting");
         }
 
-        public void OnPlayerStoppedBurnouting(Player client)
+        public void OnPlayerStoppedBurnouting(Player client, int vehicleNetworkId)
         {
             Debug.WriteLine("OnPlayerStoppedBurnouting");
         }
@@ -594,7 +594,7 @@ namespace CopsAndRobbersServer
             Debug.WriteLine("OnVehicleHealthLoss");
         }
 
-        public void OnVehicleCrash(Player client)
+        public void OnVehicleCrash(Player client, int vehicleNetworkId)
         {
             Debug.WriteLine("OnVehicleCrash");
         }
