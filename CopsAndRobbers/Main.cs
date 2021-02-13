@@ -31,10 +31,10 @@ namespace CopsAndRobbers
 
         public void OnPlayerSpawned()
         {
-            Debug.WriteLine("CNR: OnTryingToEnterVehicle NEW PED " + Base.PedHandle);
-            Debug.WriteLine("CNR: OnTryingToEnterVehicle NEW PED " + Base.PedHandle);
-            Debug.WriteLine("CNR: OnTryingToEnterVehicle NEW PED " + Base.PedHandle);
-            Debug.WriteLine("CNR: OnTryingToEnterVehicle NEW PED " + Base.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
         }
 
         public void OnPlayerTryingToEnterVehicle(int vehicleHandle, int vehicleSeat)

@@ -34,8 +34,9 @@
     <Reference Include="CitizenFX.Core">
       <HintPath>..\..\_MPEventFramework\MPFrameworkServer\CitizenFX.Core.dll</HintPath>
     </Reference>
-    <Reference Include="MPFrameworkServer">
-      <HintPath>..\..\_MPEventFramework\MPFrameworkServer\bin\Debug\MPFrameworkServer.dll</HintPath>
+    <Reference Include="MPFrameworkServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\FXServer\server-data\resources\cnr\server\MPFrameworkServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -10,12 +10,10 @@ namespace CopsAndRobbersServer
 {
     public class Main : BaseScript
     {
-        Server server = new Server();
-
         public Main()
         {
             Debug.WriteLine("======== CopsAndRobbersServer Main ========");
-            server.OnPlayerSpawned += OnPlayerSpawned;
+            Server.OnPlayerSpawned += OnPlayerSpawned;
             Debug.WriteLine("======== CopsAndRobbersServer Main END ========");
         }
 
