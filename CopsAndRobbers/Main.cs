@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CitizenFX.Core;
-using MPEventFramework;
+using MPFrameworkClient;
 using static CitizenFX.Core.Native.API;
 
 namespace CopsAndRobbers
@@ -116,9 +116,15 @@ namespace CopsAndRobbers
             core.OnVehicleHealthGain += OnVehicleHealthGain;
             core.OnVehicleHealthLoss += OnVehicleHealthLoss;
             core.OnVehicleCrash += OnVehicleCrash;
+            core.OnPlayerWeaponChange += OnPlayerWeaponChange;
 
             Debug.WriteLine("MAIN SUBSCRIBED TO EVENTS");
             // TODO testida nii palju evente kui saab.
+        }
+
+        public void OnPlayerWeaponChange()
+        {
+            Debug.WriteLine("CNR: OnPlayerWeaponChange");
         }
 
         public void OnPlayerSpawned()
