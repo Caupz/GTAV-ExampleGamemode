@@ -11,7 +11,7 @@ namespace CopsAndRobbers
 {
     public class Main : BaseScript
     {
-        Base core = new Base();
+        ClientCore core = new ClientCore();
 
         public Main()
         {
@@ -141,10 +141,10 @@ namespace CopsAndRobbers
 
         public void OnPlayerSpawned(int newPedHandle, int newPedNetworkId, float x, float y, float z)
         {
-            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
-            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
-            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
-            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
+            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
         }
 
         public void OnPlayerTryingToEnterVehicle(int vehicleHandle, int vehicleSeat)
@@ -642,15 +642,15 @@ namespace CopsAndRobbers
             RegisterCommand("cuffs", new Action<int, List<object>, string>(async (source, args, raw) =>
             {
                 Debug.WriteLine("cuffs1");
-                if (IsPedCuffed(Base.PedHandle))
+                if (IsPedCuffed(ClientCore.PedHandle))
                 {
                     Debug.WriteLine("cuffs2");
-                    SetEnableHandcuffs(Base.PedHandle, false);
+                    SetEnableHandcuffs(ClientCore.PedHandle, false);
                 }
                 else
                 {
                     Debug.WriteLine("cuffs3");
-                    SetEnableHandcuffs(Base.PedHandle, true);
+                    SetEnableHandcuffs(ClientCore.PedHandle, true);
                 }
             }), false);
 
@@ -665,7 +665,7 @@ namespace CopsAndRobbers
                     if (weapon < MPFrameworkClient.Weapon.weaponNames.Count)
                     {
                         Debug.WriteLine("giving");
-                        GiveWeaponToPed(Base.PedHandle, (uint)GetHashKey(MPFrameworkClient.Weapon.weaponNames[weapon]), 1000, false, true);
+                        GiveWeaponToPed(ClientCore.PedHandle, (uint)GetHashKey(MPFrameworkClient.Weapon.weaponNames[weapon]), 1000, false, true);
                     }
                 }
             }), false);
@@ -676,9 +676,9 @@ namespace CopsAndRobbers
 
                 Debug.WriteLine("giving");
                 uint wep = (uint)GetHashKey(weapon);
-                GiveWeaponToPed(Base.PedHandle, wep, 1, false, true);
-                SetPedWeaponTintIndex(Base.PedHandle, wep, 1);
-                SetPedInfiniteAmmo(Base.PedHandle, true, wep);
+                GiveWeaponToPed(ClientCore.PedHandle, wep, 1, false, true);
+                SetPedWeaponTintIndex(ClientCore.PedHandle, wep, 1);
+                SetPedInfiniteAmmo(ClientCore.PedHandle, true, wep);
             }), false);
 
             RegisterCommand("hp", new Action<int, List<object>, string>(async (source, args, raw) =>
@@ -689,7 +689,7 @@ namespace CopsAndRobbers
                 if (Int32.TryParse(args[0].ToString(), out hp))
                 {
                     Debug.WriteLine("hp:"+hp);
-                    SetEntityHealth(Base.PedHandle, hp);
+                    SetEntityHealth(ClientCore.PedHandle, hp);
                 }
             }), false);
 
@@ -701,7 +701,7 @@ namespace CopsAndRobbers
                 if (Int32.TryParse(args[0].ToString(), out arm))
                 {
                     Debug.WriteLine("arm:" + arm);
-                    SetPedArmour(Base.PedHandle, arm);
+                    SetPedArmour(ClientCore.PedHandle, arm);
                 }
             }), false);
 
@@ -709,13 +709,13 @@ namespace CopsAndRobbers
             {
                 helmState = !helmState;
                 Debug.WriteLine("helmState:" + helmState);
-                SetPedConfigFlag(Base.PedHandle, 35, helmState);
-                GivePedHelmet(Base.PedHandle, false, helmState ? 1 : 0, 4096);
+                SetPedConfigFlag(ClientCore.PedHandle, 35, helmState);
+                GivePedHelmet(ClientCore.PedHandle, false, helmState ? 1 : 0, 4096);
             }), false);
 
             RegisterCommand("para", new Action<int, List<object>, string>(async (source, args, raw) =>
             {
-                SetPedGadget(Base.PedHandle, (uint)GetHashKey(("GADGET_PARACHUTE")), true);
+                SetPedGadget(ClientCore.PedHandle, (uint)GetHashKey(("GADGET_PARACHUTE")), true);
             }), false);
         }
     }
