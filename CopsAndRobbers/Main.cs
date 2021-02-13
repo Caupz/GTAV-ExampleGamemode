@@ -117,9 +117,21 @@ namespace CopsAndRobbers
             core.OnVehicleHealthLoss += OnVehicleHealthLoss;
             core.OnVehicleCrash += OnVehicleCrash;
             core.OnPlayerWeaponChange += OnPlayerWeaponChange;
+            core.OnKeyPressed += OnKeyPressed;
+            core.OnKeyReleased += OnKeyReleased;
 
             Debug.WriteLine("MAIN SUBSCRIBED TO EVENTS");
             // TODO testida nii palju evente kui saab.
+        }
+
+        public void OnKeyPressed(int key)
+        {
+            Debug.WriteLine("CNR: OnKeyPressed "+ key);
+        }
+
+        public void OnKeyReleased(int key)
+        {
+            Debug.WriteLine("CNR: OnKeyReleased " + key);
         }
 
         public void OnPlayerWeaponChange(uint oldWeapon, uint newWeapon)
