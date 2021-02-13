@@ -122,12 +122,12 @@ namespace CopsAndRobbers
             // TODO testida nii palju evente kui saab.
         }
 
-        public void OnPlayerWeaponChange()
+        public void OnPlayerWeaponChange(uint oldWeapon, uint newWeapon)
         {
             Debug.WriteLine("CNR: OnPlayerWeaponChange");
         }
 
-        public void OnPlayerSpawned()
+        public void OnPlayerSpawned(int newPedHandle, int newPedNetworkId, float x, float y, float z)
         {
             Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
             Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + Base.PedHandle);
@@ -220,12 +220,12 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerStoppedToGetUp");
         }
 
-        public void OnPlayerStartedToAimFromCover()
+        public void OnPlayerStartedToAimFromCover(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStartedToAimFromCover");
         }
 
-        public void OnPlayerStoppedToAimFromCover()
+        public void OnPlayerStoppedToAimFromCover(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedToAimFromCover");
         }
@@ -270,12 +270,12 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerStoppedClimbing");
         }
 
-        public void OnPlayerDied()
+        public void OnPlayerDied(float x, float y, float z)
         {
             Debug.WriteLine("CNR: OnPlayerDied");
         }
 
-        public void OnPlayerRevived()
+        public void OnPlayerRevived(float x, float y, float z)
         {
             Debug.WriteLine("CNR: OnPlayerRevived");
         }
@@ -290,12 +290,12 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerStoppedDiving");
         }
 
-        public void OnPlayerStartedDriveBy()
+        public void OnPlayerStartedDriveBy(int vehicleHandle, uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStartedDriveBy");
         }
 
-        public void OnPlayerStoppedDriveBy()
+        public void OnPlayerStoppedDriveBy(int vehicleHandle, uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedDriveBy");
         }
@@ -350,22 +350,22 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerLeftParachuteFreefall");
         }
 
-        public void OnPlayerStartedReloading()
+        public void OnPlayerStartedReloading(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStartedReloading");
         }
 
-        public void OnPlayerStoppedReloading()
+        public void OnPlayerStoppedReloading(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedReloading");
         }
 
-        public void OnPlayerStartedShooting()
+        public void OnPlayerStartedShooting(uint weapon, int ammo)
         {
             Debug.WriteLine("CNR: OnPlayerStartedShooting");
         }
 
-        public void OnPlayerStoppedShooting()
+        public void OnPlayerStoppedShooting(uint weapon, int ammo)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedShooting");
         }
@@ -390,12 +390,12 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerStoppedSwimmingUnderwater");
         }
 
-        public void OnPlayerStartedStealthKill()
+        public void OnPlayerStartedStealthKill(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStartedStealthKill");
         }
 
-        public void OnPlayerStoppedStealthKill()
+        public void OnPlayerStoppedStealthKill(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedStealthKill");
         }
@@ -430,7 +430,7 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerLeftMainMenu");
         }
 
-        public void OnPlayerReadyToShoot()
+        public void OnPlayerReadyToShoot(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerReadyToShoot");
         }
@@ -440,122 +440,122 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerNotReadyToShoot");
         }
 
-        public void OnPlayerStartedAiming()
+        public void OnPlayerStartedAiming(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStartedAiming");
         }
 
-        public void OnPlayerStoppedAiming()
+        public void OnPlayerStoppedAiming(uint weapon)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedAiming");
         }
 
-        public void OnPlayerHealthGain()
+        public void OnPlayerHealthGain(int oldHealth, int newHealth)
         {
             Debug.WriteLine("CNR: OnPlayerHealthGain");
         }
 
-        public void OnPlayerHealthLoss()
+        public void OnPlayerHealthLoss(int oldHealth, int newHealth)
         {
             Debug.WriteLine("CNR: OnPlayerHealthLoss");
         }
 
-        public void OnPlayerArmourGain()
+        public void OnPlayerArmourGain(int oldHealth, int newHealth)
         {
             Debug.WriteLine("CNR: OnPlayerArmourGain");
         }
 
-        public void OnPlayerArmourLoss()
+        public void OnPlayerArmourLoss(int oldHealth, int newHealth)
         {
             Debug.WriteLine("CNR: OnPlayerArmourLoss");
         }
 
-        public void OnPlayerEnteredBoat()
+        public void OnPlayerEnteredBoat(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredBoat");
         }
 
-        public void OnPlayerLeftBoat()
+        public void OnPlayerLeftBoat(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeftBoat");
         }
 
-        public void OnPlayerEnteredHeli()
+        public void OnPlayerEnteredHeli(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredHeli");
         }
 
-        public void OnPlayerLeftHeli()
+        public void OnPlayerLeftHeli(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeftHeli");
         }
 
-        public void OnPlayerEnteredPlane()
+        public void OnPlayerEnteredPlane(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredPlane");
         }
 
-        public void OnPlayerLeftPlane()
+        public void OnPlayerLeftPlane(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeftPlane");
         }
 
-        public void OnPlayerEnteredPoliceVehicle()
+        public void OnPlayerEnteredPoliceVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredPoliceVehicle");
         }
 
-        public void OnPlayerLeftPoliceVehicle()
+        public void OnPlayerLeftPoliceVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeftPoliceVehicle");
         }
 
-        public void OnPlayerEnteredSub()
+        public void OnPlayerEnteredSub(int vehicleHandle)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredSub");
         }
 
-        public void OnPlayerLeftSub()
+        public void OnPlayerLeftSub(int vehicleHandle)
         {
             Debug.WriteLine("CNR: OnPlayerLeftSub");
         }
 
-        public void OnPlayerEnteredTaxi()
+        public void OnPlayerEnteredTaxi(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredTaxi");
         }
 
-        public void OnPlayerLeftTaxi()
+        public void OnPlayerLeftTaxi(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeftTaxi");
         }
 
-        public void OnPlayerEnteredTrain()
+        public void OnPlayerEnteredTrain(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredTrain");
         }
 
-        public void OnPlayerLeftTrain()
+        public void OnPlayerLeftTrain(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeftTrain");
         }
 
-        public void OnPlayerEnteredFlyingVehicle()
+        public void OnPlayerEnteredFlyingVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerEnteredFlyingVehicle");
         }
 
-        public void OnPlayerLeftFlyingVehicle()
+        public void OnPlayerLeftFlyingVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerLeftFlyingVehicle");
         }
 
-        public void OnPlayerStartedOnBike()
+        public void OnPlayerStartedOnBike(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerStartedOnBike");
         }
 
-        public void OnPlayerStoppedOnBike()
+        public void OnPlayerStoppedOnBike(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedOnBike");
         }
@@ -570,47 +570,47 @@ namespace CopsAndRobbers
             Debug.WriteLine("CNR: OnPlayerStoppedOnVehicle");
         }
 
-        public void OnPlayerStartedJumpingOutOfVehicle()
+        public void OnPlayerStartedJumpingOutOfVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerStartedJumpingOutOfVehicle");
         }
 
-        public void OnPlayerStoppedJumpingOutOfVehicle()
+        public void OnPlayerStoppedJumpingOutOfVehicle(int vehicleHandle, int vehicleSeat)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedJumpingOutOfVehicle");
         }
 
-        public void OnPlayerStartedMovingVehicle()
+        public void OnPlayerStartedMovingVehicle(int vehicleHandle)
         {
             Debug.WriteLine("CNR: OnPlayerStartedMovingVehicle");
         }
 
-        public void OnPlayerStoppedVehicle()
+        public void OnPlayerStoppedVehicle(int vehicleHandle)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedVehicle");
         }
 
-        public void OnPlayerStartedBurnouting()
+        public void OnPlayerStartedBurnouting(int vehicleHandle)
         {
             Debug.WriteLine("CNR: OnPlayerStartedBurnouting");
         }
 
-        public void OnPlayerStoppedBurnouting()
+        public void OnPlayerStoppedBurnouting(int vehicleHandle)
         {
             Debug.WriteLine("CNR: OnPlayerStoppedBurnouting");
         }
 
-        public void OnVehicleHealthGain(int vehicleHealth, float vehicleBodyHealth, float vehicleEngineHealth, float vehiclePetrolTankHealth)
+        public void OnVehicleHealthGain(int vehicleHandle, int vehicleHealth, float vehicleBodyHealth, float vehicleEngineHealth, float vehiclePetrolTankHealth)
         {
             Debug.WriteLine("CNR: OnVehicleHealthGain");
         }
 
-        public void OnVehicleHealthLoss(int vehicleHealth, float vehicleBodyHealth, float vehicleEngineHealth, float vehiclePetrolTankHealth)
+        public void OnVehicleHealthLoss(int vehicleHandle, int vehicleHealth, float vehicleBodyHealth, float vehicleEngineHealth, float vehiclePetrolTankHealth)
         {
             Debug.WriteLine("CNR: OnVehicleHealthLoss");
         }
 
-        public void OnVehicleCrash()
+        public void OnVehicleCrash(int vehicleHandle)
         {
             Debug.WriteLine("CNR: OnVehicleCrash");
         }
@@ -648,12 +648,12 @@ namespace CopsAndRobbers
 
                 if (Int32.TryParse(args[0].ToString(), out weapon))
                 {
-                    Debug.WriteLine("weapon " + weapon + " MPEventFramework.Weapon.weaponNames.Count:" + MPEventFramework.Weapon.weaponNames.Count);
+                    Debug.WriteLine("weapon " + weapon + " MPEventFramework.Weapon.weaponNames.Count:" + MPFrameworkClient.Weapon.weaponNames.Count);
 
-                    if (weapon < MPEventFramework.Weapon.weaponNames.Count)
+                    if (weapon < MPFrameworkClient.Weapon.weaponNames.Count)
                     {
                         Debug.WriteLine("giving");
-                        GiveWeaponToPed(Base.PedHandle, (uint)GetHashKey(MPEventFramework.Weapon.weaponNames[weapon]), 1000, false, true);
+                        GiveWeaponToPed(Base.PedHandle, (uint)GetHashKey(MPFrameworkClient.Weapon.weaponNames[weapon]), 1000, false, true);
                     }
                 }
             }), false);
