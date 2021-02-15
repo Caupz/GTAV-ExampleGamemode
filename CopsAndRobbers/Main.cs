@@ -17,6 +17,7 @@ namespace CopsAndRobbers
         {
             EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
             Debug.WriteLine("MAIN SUBSCRIBING TO EVENTS");
+            core.debug = true;
 
             core.OnPlayerSpawned += OnPlayerSpawned;
             core.OnPlayerStartedWalking += OnPlayerStartedWalking;
@@ -141,9 +142,6 @@ namespace CopsAndRobbers
 
         public void OnPlayerSpawned(int newPedHandle, int newPedNetworkId, float x, float y, float z)
         {
-            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
-            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
-            Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
             Debug.WriteLine("CNR: OnPlayerSpawned NEW PED " + ClientCore.PedHandle);
         }
 
@@ -688,9 +686,14 @@ namespace CopsAndRobbers
                 Debug.WriteLine("hp");
                 if (Int32.TryParse(args[0].ToString(), out hp))
                 {
-                    Debug.WriteLine("hp:"+hp);
+                    Debug.WriteLine("hp:" + hp);
                     SetEntityHealth(ClientCore.PedHandle, hp);
                 }
+            }), false);
+            RegisterCommand("fixveh", new Action<int, List<object>, string>(async (source, args, raw) =>
+            {
+                SetEntityHealth(ClientCore.VehicleHandle, 1000);
+                SetVehicleBodyHealth(ClientCore.VehicleHandle, 1000);
             }), false);
 
             RegisterCommand("armour", new Action<int, List<object>, string>(async (source, args, raw) =>

@@ -12,7 +12,7 @@ namespace CopsAndRobbersServer
     {
         public Main()
         {
-            Debug.WriteLine("======== CopsAndRobbersServer Main ========");
+            Utils.Log("======== CopsAndRobbersServer Main ========");
             ServerCore.OnPlayerSpawned += OnPlayerSpawned;
             ServerCore.OnPlayerStartedWalking += OnPlayerStartedWalking;
             ServerCore.OnPlayerStoppedWalking += OnPlayerStoppedWalking;
@@ -111,492 +111,498 @@ namespace CopsAndRobbersServer
             ServerCore.OnVehicleHealthGain += OnVehicleHealthGain;
             ServerCore.OnVehicleHealthLoss += OnVehicleHealthLoss;
             ServerCore.OnVehicleCrash += OnVehicleCrash;
-            Debug.WriteLine("======== CopsAndRobbersServer Main END ========");
+            ServerCore.OnPlayerWeaponChange += OnPlayerWeaponChange;
+            Utils.Log("======== CopsAndRobbersServer Main END ========");
         }
 
         public void OnPlayerSpawned(Player client)
         {
-            Debug.WriteLine("CNR OnPlayerSpawned " + client.Handle);
+            Utils.Log("CNR OnPlayerSpawned " + client.Handle);
         }
 
         public void OnPlayerStartedWalking(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedWalking");
+            Utils.Log("OnPlayerStartedWalking");
         }
 
         public void OnPlayerStoppedWalking(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedWalking");
+            Utils.Log("OnPlayerStoppedWalking");
         }
 
         public void OnPlayerStartedRunning(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedRunning");
+            Utils.Log("OnPlayerStartedRunning");
         }
 
         public void OnPlayerStoppedRunning(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedRunning");
+            Utils.Log("OnPlayerStoppedRunning");
         }
 
         public void OnPlayerStartedSprinting(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedSprinting");
+            Utils.Log("OnPlayerStartedSprinting");
         }
 
         public void OnPlayerStoppedSprinting(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedSprinting");
+            Utils.Log("OnPlayerStoppedSprinting");
         }
 
         public void OnPlayerStartedJumping(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedJumping");
+            Utils.Log("OnPlayerStartedJumping");
         }
 
         public void OnPlayerStoppedJumping(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedJumping");
+            Utils.Log("OnPlayerStoppedJumping");
         }
 
         public void OnPlayerCuffed(Player client)
         {
-            Debug.WriteLine("OnPlayerCuffed");
+            Utils.Log("OnPlayerCuffed");
         }
 
         public void OnPlayerUnCuffed(Player client)
         {
-            Debug.WriteLine("OnPlayerUnCuffed");
+            Utils.Log("OnPlayerUnCuffed");
         }
 
         public void OnPlayerStartedToGetUp(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedToGetUp");
+            Utils.Log("OnPlayerStartedToGetUp");
         }
 
         public void OnPlayerStoppedToGetUp(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedToGetUp");
+            Utils.Log("OnPlayerStoppedToGetUp");
         }
 
         public void OnPlayerStartedToAimFromCover(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStartedToAimFromCover");
+            Utils.Log("OnPlayerStartedToAimFromCover");
         }
 
         public void OnPlayerStoppedToAimFromCover(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStoppedToAimFromCover");
+            Utils.Log("OnPlayerStoppedToAimFromCover");
         }
 
         public void OnPlayerStartedGettingJacked(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedGettingJacked");
+            Utils.Log("OnPlayerStartedGettingJacked");
         }
 
         public void OnPlayerStoppedGettingJacked(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedGettingJacked");
+            Utils.Log("OnPlayerStoppedGettingJacked");
         }
 
         public void OnPlayerStartedJacking(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedJacking");
+            Utils.Log("OnPlayerStartedJacking");
         }
 
         public void OnPlayerStoppedJacking(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedJacking");
+            Utils.Log("OnPlayerStoppedJacking");
         }
 
         public void OnPlayerStartedGettingStunned(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedGettingStunned");
+            Utils.Log("OnPlayerStartedGettingStunned");
         }
 
         public void OnPlayerStoppedGettingStunned(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedGettingStunned");
+            Utils.Log("OnPlayerStoppedGettingStunned");
         }
 
         public void OnPlayerStartedClimbing(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedClimbing");
+            Utils.Log("OnPlayerStartedClimbing");
         }
 
         public void OnPlayerStoppedClimbing(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedClimbing");
+            Utils.Log("OnPlayerStoppedClimbing");
         }
 
         public void OnPlayerDied(Player client, float x, float y, float z)
         {
-            Debug.WriteLine("OnPlayerDied");
+            Utils.Log("OnPlayerDied");
         }
 
         public void OnPlayerRevived(Player client, float x, float y, float z)
         {
-            Debug.WriteLine("OnPlayerRevived");
+            Utils.Log("OnPlayerRevived");
         }
 
         public void OnPlayerStartedDiving(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedDiving");
+            Utils.Log("OnPlayerStartedDiving");
         }
 
         public void OnPlayerStoppedDiving(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedDiving");
+            Utils.Log("OnPlayerStoppedDiving");
         }
 
         public void OnPlayerStartedDriveBy(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStartedDriveBy");
+            Utils.Log("OnPlayerStartedDriveBy");
         }
 
         public void OnPlayerStoppedDriveBy(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStoppedDriveBy");
+            Utils.Log("OnPlayerStoppedDriveBy");
         }
 
         public void OnPlayerStartedFalling(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedFalling");
+            Utils.Log("OnPlayerStartedFalling");
         }
 
         public void OnPlayerStoppedFalling(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedFalling");
+            Utils.Log("OnPlayerStoppedFalling");
         }
 
         public void OnPlayerStartedOnFoot(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedOnFoot");
+            Utils.Log("OnPlayerStartedOnFoot");
         }
 
         public void OnPlayerStoppedOnFoot(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedOnFoot");
+            Utils.Log("OnPlayerStoppedOnFoot");
         }
 
         public void OnPlayerEnteredMeleeCombat(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerEnteredMeleeCombat");
+            Utils.Log("OnPlayerEnteredMeleeCombat");
         }
 
         public void OnPlayerLeftMeleeCombat(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerLeftMeleeCombat");
+            Utils.Log("OnPlayerLeftMeleeCombat");
         }
 
         public void OnPlayerEnteredCover(Player client)
         {
-            Debug.WriteLine("OnPlayerEnteredCover");
+            Utils.Log("OnPlayerEnteredCover");
         }
 
         public void OnPlayerLeftCover(Player client)
         {
-            Debug.WriteLine("OnPlayerLeftCover");
+            Utils.Log("OnPlayerLeftCover");
         }
 
         public void OnPlayerEnteredParachuteFreefall(Player client)
         {
-            Debug.WriteLine("OnPlayerEnteredParachuteFreefall");
+            Utils.Log("OnPlayerEnteredParachuteFreefall");
         }
 
         public void OnPlayerLeftParachuteFreefall(Player client)
         {
-            Debug.WriteLine("OnPlayerLeftParachuteFreefall");
+            Utils.Log("OnPlayerLeftParachuteFreefall");
         }
 
         public void OnPlayerStartedReloading(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStartedReloading");
+            Utils.Log("OnPlayerStartedReloading");
         }
 
         public void OnPlayerStoppedReloading(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStoppedReloading");
+            Utils.Log("OnPlayerStoppedReloading");
         }
 
         public void OnPlayerStartedShooting(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStartedShooting");
+            Utils.Log("OnPlayerStartedShooting");
         }
 
         public void OnPlayerStoppedShooting(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStoppedShooting");
+            Utils.Log("OnPlayerStoppedShooting");
         }
 
         public void OnPlayerStartedSwimming(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedSwimming");
+            Utils.Log("OnPlayerStartedSwimming");
         }
 
         public void OnPlayerStoppedSwimming(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedSwimming");
+            Utils.Log("OnPlayerStoppedSwimming");
         }
 
         public void OnPlayerStartedSwimmingUnderwater(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedSwimmingUnderwater");
+            Utils.Log("OnPlayerStartedSwimmingUnderwater");
         }
 
         public void OnPlayerStoppedSwimmingUnderwater(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedSwimmingUnderwater");
+            Utils.Log("OnPlayerStoppedSwimmingUnderwater");
         }
 
         public void OnPlayerStartedStealthKill(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStartedStealthKill");
+            Utils.Log("OnPlayerStartedStealthKill");
         }
 
         public void OnPlayerStoppedStealthKill(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStoppedStealthKill");
+            Utils.Log("OnPlayerStoppedStealthKill");
         }
 
         public void OnPlayerStartedVaulting(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedVaulting");
+            Utils.Log("OnPlayerStartedVaulting");
         }
 
         public void OnPlayerStoppedVaulting(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedVaulting");
+            Utils.Log("OnPlayerStoppedVaulting");
         }
 
         public void OnPlayerStartedWearingHelmet(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedWearingHelmet");
+            Utils.Log("OnPlayerStartedWearingHelmet");
         }
 
         public void OnPlayerStoppedWearingHelmet(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedWearingHelmet");
+            Utils.Log("OnPlayerStoppedWearingHelmet");
         }
 
         public void OnPlayerEnteredMainMenu(Player client)
         {
-            Debug.WriteLine("OnPlayerEnteredMainMenu");
+            Utils.Log("OnPlayerEnteredMainMenu");
         }
 
         public void OnPlayerLeftMainMenu(Player client)
         {
-            Debug.WriteLine("OnPlayerLeftMainMenu");
+            Utils.Log("OnPlayerLeftMainMenu");
         }
 
         public void OnPlayerReadyToShoot(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerReadyToShoot");
+            Utils.Log("OnPlayerReadyToShoot");
         }
 
         public void OnPlayerNotReadyToShoot(Player client)
         {
-            Debug.WriteLine("OnPlayerNotReadyToShoot");
+            Utils.Log("OnPlayerNotReadyToShoot");
         }
 
         public void OnPlayerStartedAiming(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStartedAiming");
+            Utils.Log("OnPlayerStartedAiming");
         }
 
         public void OnPlayerStoppedAiming(Player client, uint weapon)
         {
-            Debug.WriteLine("OnPlayerStoppedAiming");
+            Utils.Log("OnPlayerStoppedAiming");
         }
 
         public void OnPlayerHealthGain(Player client, int oldHealth, int newHealth)
         {
-            Debug.WriteLine("OnPlayerHealthGain");
+            Utils.Log("OnPlayerHealthGain");
         }
 
         public void OnPlayerHealthLoss(Player client, int oldHealth, int newHealth)
         {
-            Debug.WriteLine("OnPlayerHealthLoss");
+            Utils.Log("OnPlayerHealthLoss");
         }
 
         public void OnPlayerArmourGain(Player client, int oldArmour, int newArmour)
         {
-            Debug.WriteLine("OnPlayerArmourGain");
+            Utils.Log("OnPlayerArmourGain");
         }
 
         public void OnPlayerArmourLoss(Player client, int oldArmour, int newArmour)
         {
-            Debug.WriteLine("OnPlayerArmourLoss");
+            Utils.Log("OnPlayerArmourLoss");
         }
 
         public void OnPlayerTryingToEnterVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerTryingToEnterVehicle");
+            Utils.Log("OnPlayerTryingToEnterVehicle");
         }
 
         public void OnPlayerEnteredVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredVehicle");
+            Utils.Log("OnPlayerEnteredVehicle");
         }
 
         public void OnPlayerLeaveVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeaveVehicle");
+            Utils.Log("OnPlayerLeaveVehicle");
         }
 
         public void OnPlayerSeatChange(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerSeatChange");
+            Utils.Log("OnPlayerSeatChange");
         }
 
         public void OnPlayerSpawnIntoVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerSpawnIntoVehicle");
+            Utils.Log("OnPlayerSpawnIntoVehicle");
         }
 
         public void OnPlayerEnteredBoat(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredBoat");
+            Utils.Log("OnPlayerEnteredBoat");
         }
 
         public void OnPlayerLeftBoat(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftBoat");
+            Utils.Log("OnPlayerLeftBoat");
         }
 
         public void OnPlayerEnteredHeli(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredHeli");
+            Utils.Log("OnPlayerEnteredHeli");
         }
 
         public void OnPlayerLeftHeli(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftHeli");
+            Utils.Log("OnPlayerLeftHeli");
         }
 
         public void OnPlayerEnteredPlane(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredPlane");
+            Utils.Log("OnPlayerEnteredPlane");
         }
 
         public void OnPlayerLeftPlane(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftPlane");
+            Utils.Log("OnPlayerLeftPlane");
         }
 
         public void OnPlayerEnteredPoliceVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredPoliceVehicle");
+            Utils.Log("OnPlayerEnteredPoliceVehicle");
         }
 
         public void OnPlayerLeftPoliceVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftPoliceVehicle");
+            Utils.Log("OnPlayerLeftPoliceVehicle");
         }
 
         public void OnPlayerEnteredSub(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredSub");
+            Utils.Log("OnPlayerEnteredSub");
         }
 
         public void OnPlayerLeftSub(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftSub");
+            Utils.Log("OnPlayerLeftSub");
         }
 
         public void OnPlayerEnteredTaxi(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredTaxi");
+            Utils.Log("OnPlayerEnteredTaxi");
         }
 
         public void OnPlayerLeftTaxi(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftTaxi");
+            Utils.Log("OnPlayerLeftTaxi");
         }
 
         public void OnPlayerEnteredTrain(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredTrain");
+            Utils.Log("OnPlayerEnteredTrain");
         }
 
         public void OnPlayerLeftTrain(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftTrain");
+            Utils.Log("OnPlayerLeftTrain");
         }
 
         public void OnPlayerEnteredFlyingVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerEnteredFlyingVehicle");
+            Utils.Log("OnPlayerEnteredFlyingVehicle");
         }
 
         public void OnPlayerLeftFlyingVehicle(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerLeftFlyingVehicle");
+            Utils.Log("OnPlayerLeftFlyingVehicle");
         }
 
         public void OnPlayerStartedOnBike(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerStartedOnBike");
+            Utils.Log("OnPlayerStartedOnBike");
         }
 
         public void OnPlayerStoppedOnBike(Player client, int vehicleNetworkId, int seat)
         {
-            Debug.WriteLine("OnPlayerStoppedOnBike");
+            Utils.Log("OnPlayerStoppedOnBike");
         }
 
         public void OnPlayerStartedOnVehicle(Player client)
         {
-            Debug.WriteLine("OnPlayerStartedOnVehicle");
+            Utils.Log("OnPlayerStartedOnVehicle");
         }
 
         public void OnPlayerStoppedOnVehicle(Player client)
         {
-            Debug.WriteLine("OnPlayerStoppedOnVehicle");
+            Utils.Log("OnPlayerStoppedOnVehicle");
         }
 
         public void OnPlayerStartedJumpingOutOfVehicle(Player client, int vehicleNetworkId, int vehicleSeat)
         {
-            Debug.WriteLine("OnPlayerStartedJumpingOutOfVehicle");
+            Utils.Log("OnPlayerStartedJumpingOutOfVehicle");
         }
 
         public void OnPlayerStoppedJumpingOutOfVehicle(Player client, int vehicleNetworkId, int vehicleSeat)
         {
-            Debug.WriteLine("OnPlayerStoppedJumpingOutOfVehicle");
+            Utils.Log("OnPlayerStoppedJumpingOutOfVehicle");
         }
 
         public void OnPlayerStartedMovingVehicle(Player client, int vehicleNetworkId)
         {
-            Debug.WriteLine("OnPlayerStartedMovingVehicle");
+            Utils.Log("OnPlayerStartedMovingVehicle");
         }
 
         public void OnPlayerStoppedVehicle(Player client, int vehicleNetworkId)
         {
-            Debug.WriteLine("OnPlayerStoppedVehicle");
+            Utils.Log("OnPlayerStoppedVehicle");
         }
 
         public void OnPlayerStartedBurnouting(Player client, int vehicleNetworkId)
         {
-            Debug.WriteLine("OnPlayerStartedBurnouting");
+            Utils.Log("OnPlayerStartedBurnouting");
         }
 
         public void OnPlayerStoppedBurnouting(Player client, int vehicleNetworkId)
         {
-            Debug.WriteLine("OnPlayerStoppedBurnouting");
+            Utils.Log("OnPlayerStoppedBurnouting");
         }
 
         public void OnVehicleHealthGain(Player client, int vehicleNetworkId, int vehicleHealth, float vehicleBodyHealth, float vehicleEngineHealth, float vehiclePetrolTankHealth)
         {
-            Debug.WriteLine("OnVehicleHealthGain");
+            Utils.Log("OnVehicleHealthGain");
         }
 
         public void OnVehicleHealthLoss(Player client, int vehicleNetworkId, int vehicleHealth, float vehicleBodyHealth, float vehicleEngineHealth, float vehiclePetrolTankHealth)
         {
-            Debug.WriteLine("OnVehicleHealthLoss");
+            Utils.Log("OnVehicleHealthLoss");
         }
 
         public void OnVehicleCrash(Player client, int vehicleNetworkId)
         {
-            Debug.WriteLine("OnVehicleCrash");
+            Utils.Log("OnVehicleCrash");
+        }
+
+        public void OnPlayerWeaponChange(Player client, uint oldWeapon, uint newWeapon)
+        {
+            Debug.WriteLine("CNR: OnPlayerWeaponChange");
         }
     }
 }
