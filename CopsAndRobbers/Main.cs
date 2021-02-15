@@ -630,7 +630,7 @@ namespace CopsAndRobbers
         [Tick]
         async Task OnTickMain()
         {
-            core.Process();
+            await core.Process();
         }
 
         bool helmState = false;
