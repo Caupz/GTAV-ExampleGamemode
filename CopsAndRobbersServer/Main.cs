@@ -13,6 +13,7 @@ namespace CopsAndRobbersServer
         public Main()
         {
             Utils.Log("======== CopsAndRobbersServer Main ========");
+            ServerCore.debug = true;
             ServerCore.OnPlayerSpawned += OnPlayerSpawned;
             ServerCore.OnPlayerStartedWalking += OnPlayerStartedWalking;
             ServerCore.OnPlayerStoppedWalking += OnPlayerStoppedWalking;
